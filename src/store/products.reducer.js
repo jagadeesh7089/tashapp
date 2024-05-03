@@ -5,7 +5,6 @@ const initialState={
 }
 function productsreducer(state=initialState,action){
     if(action.type==="Addtocart"){
-        console.log(action.payload)
         return {...state,cart:[...state.cart,action.payload]}
     }
     return state
