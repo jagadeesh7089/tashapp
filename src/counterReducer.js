@@ -11,5 +11,5 @@ function counterreducer(state=initialState ,action){
     }
    
     return state
-}
-export default counterreducer
+} 
+export default counterreducer  
