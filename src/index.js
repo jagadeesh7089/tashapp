@@ -10,6 +10,7 @@ import {
 import Kajal from './routing/kajal';
 import Infield from './routing/royal';
 import Countries from './countries';
+import Country from './country';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
       path: "/countries",
       element:<Countries></Countries>
+    },
+    {
+      path: "/country/:cname",
+      element:<Country></Country>
     },
   ]
   },
