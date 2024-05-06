@@ -17,21 +17,24 @@ const router = createBrowserRouter([
     path: "/",
     element: <App></App>,
     children:[ {
-      path: "/kaju",
+      path: "kaju",
       element: <Kajal></Kajal>
     },
     {
-      path: "/re",
+      path: "re",
       element: <Infield></Infield>
     },
     {
-      path: "/countries",
-      element:<Countries></Countries>
+      path: "countries",
+      element:<Countries></Countries>,
+      children:[
+        {
+          path: "country/:cname",
+          element:<Country></Country>
+        },
+      ]
     },
-    {
-      path: "/country/:cname",
-      element:<Country></Country>
-    },
+    
   ]
   },
  
