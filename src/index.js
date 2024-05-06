@@ -7,18 +7,35 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Kajal from './routing/kajal';
+import Infield from './routing/royal';
+import Countries from './countries';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>
+    element: <App></App>,
+    children:[ {
+      path: "/kaju",
+      element: <Kajal></Kajal>
+    },
+    {
+      path: "/re",
+      element: <Infield></Infield>
+    },
+    {
+      path: "/countries",
+      element:<Countries></Countries>
+    },
+  ]
   },
+ 
 ]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider React={React}>
+  <RouterProvider router={router}>
     <App />
   </RouterProvider>
   
