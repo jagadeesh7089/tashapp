@@ -8,7 +8,7 @@ function Country(){
 //    console.log(cname);
    useEffect(()=>{
      axios.get(`https://restcountries.com/v3.1/alpha/${cname}`).then(res=>{
-        console.log(res.data);
+        console.log(res.data[0]);
         setCountry({...res.data[0]})
      })
    },[cname])
