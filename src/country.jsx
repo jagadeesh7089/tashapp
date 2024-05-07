@@ -15,7 +15,7 @@ function Country(){
    
     return(
         <div>
-       <div className="border border-2 p-5 bg-info">
+       <div className="border border-2 p-5 bg-info shadow-lg">
         <h1>Country Details of {country?.name.common}</h1>
         <img src={country?.flags.png} />
         <h3> Name: {country?.name.common}</h3>
