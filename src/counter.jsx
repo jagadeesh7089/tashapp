@@ -13,4 +13,4 @@ import { connect } from "react-redux";
         </div>
     )
  }
-  export default connect(function(store){return store}) (Counter)
+  export default connect(function(store){return store})(Counter)
