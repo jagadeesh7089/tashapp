@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './redux-router/counter ';
+import Counter from './redux -router/counter';
 
 function App() {
   return (
     <div className="App">
-     <Counter></Counter>
+    <h1>Hii</h1>
+    <Counter></Counter>
     </div>
   );
 }
