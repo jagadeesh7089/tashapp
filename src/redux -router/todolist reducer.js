@@ -1,7 +1,7 @@
 const initialstate={
     todos:["jagadeesh","Lakshman","Ayyappa","Dinesh"]
 }
-function Todolistreducer(){
+function Todolistreducer(state=initialstate,action){
     return state
 }
 export default Todolistreducer

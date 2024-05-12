@@ -1,4 +1,4 @@
 import {createStore} from "redux"
-import Counterreducer from "./counter reducer"
-var store=createStore(Counterreducer)
+import reducer from "./reducer"
+var store=createStore(reducer)
 export default store
