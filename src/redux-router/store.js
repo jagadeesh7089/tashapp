@@ -1,3 +1,3 @@
 import {createStore} from "redux"
-
-export default Store
+ var store=createStore(reducer)
+ export default store
