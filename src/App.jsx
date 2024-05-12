@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import StudentForm from './Formik/studentform';
+
 
 function App() {
   return (
     <div className="App">
-     <h1>Hii</h1>
+      <StudentForm></StudentForm>
     </div>
   );
 }
