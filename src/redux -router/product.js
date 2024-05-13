@@ -616,4 +616,4 @@ var product= [
       "discount": 9
     }
   ]
-  export default products
+  export default product
