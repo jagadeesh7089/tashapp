@@ -8,10 +8,10 @@ function Todolist(props){
     return(
      <div>
         <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}} /> 
-        <button onClick={()=>{props.dispatch({type:"Addtodo",payload:newtodo})}}>Addtodo</button>
+        <button onClick={()=>{props.add(newtodo)}}>Addtodo</button>
         <div>
             {
-              props.Todolistreducer.todos.map(todo=>{
+              props.todos.map(todo=>{
                     return <li>{todo}</li>
                 })
             }
@@ -19,4 +19,10 @@ function Todolist(props){
      </div>
     )
 }
-export default  connect(store=>store) (Todolist)
+export default  connect(function(state){
+    return state.Todolistreducer
+},function(dispatch){
+    return{
+        add:(newtodo)=>{dispatch({type:"Addtodo",payload:newtodo})}
+    }
+}) (Todolist)

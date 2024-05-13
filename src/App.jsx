@@ -1,17 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './redux -router/counter';
-import Todolist from './redux -router/todolist';
-import Products from './products';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
     <h1>Hii</h1>
-    <Counter></Counter>
-    <Todolist></Todolist>
-    <Products></Products>
+    <div className='d-flex justify-content-between w-25 m-2'>
+    <Link to="counter">Counter</Link>
+    <Link to="todolist">Todolist</Link>
+    <Link to="products">Products</Link>
     </div>
+
+    <Outlet></Outlet>
+    </div>
+  
+
   );
 }
 

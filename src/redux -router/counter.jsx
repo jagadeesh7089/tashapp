@@ -4,10 +4,17 @@ function Counter(props){
    console.log(props)
     return(
         <div>
-            <h1>Counter:{props.Counterreducer.count}</h1>
-             <button onClick={()=>{props.dispatch({type:"INC"})}}>Increment</button>
-             <button onClick={()=>{props.dispatch({type:"DEC"})}}>DEcrement</button>
+            <h1>Counter:{props.count}</h1>
+             <button onClick={()=>{props.inc()}}>Increment</button>
+             <button onClick={()=>{props.dec()}}>DEcrement</button>
         </div>
     )
 }
-export default connect(store=>store) (Counter)
+export default connect(function(state){
+    return state.Counterreducer
+},function(dispatch){
+    return {
+        inc:()=>{dispatch({type:"INC"})},
+        dec:()=>{dispatch({type:"DEC"})},
+    }
+}) (Counter)
