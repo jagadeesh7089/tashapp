@@ -13,4 +13,4 @@ export const productsApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const {useGetAllProductsQuery} = productsApi
+export const {useGetAllProductsQuery,useLazyGetAllProductsQuery} = productsApi
