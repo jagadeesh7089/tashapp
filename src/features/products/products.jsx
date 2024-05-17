@@ -1,9 +1,9 @@
 import React from "react";
-import { useGetAllCountriesQuery } from "./countriesapi";
-import { useGetAllProductsQuery } from "./productsapi";
+import { useGetAllProductsQuery } from "../../services/productsapi";
+
 
 function Products(){
-    var {isLoading,data}=useGetAllProductsQuery()
+   var{isLoading,data}=useGetAllProductsQuery()
          console.log(data)
     return (
         <div>
