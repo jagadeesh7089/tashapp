@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
-import todolistReducer from '../features/todolist/todolistSlice'
+import todolistReducer from '../features/todolist/todolistslice'
 import {countriesApi} from '../services/countriesapi'
 import { productsApi } from '../services/productsapi';
 export const store = configureStore({
