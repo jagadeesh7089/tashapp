@@ -10,7 +10,7 @@ function StudentForm(){
             age:""
         },
         validationSchema: Yup.object({
-            firstname: Yup.string().max(9).required(),
+            firstname: Yup.string().max(9,"babu chusuko").required(),
             lastname:Yup.string().max(5).required(),
             password:Yup.string().matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/," Password was not strong"),
             age:Yup.number().test("checkage","age is not correct",(x)=>{
