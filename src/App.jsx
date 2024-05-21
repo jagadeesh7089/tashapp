@@ -6,14 +6,16 @@ import Todolist from './features/todolist/todolist';
 
 import Countries from './features/countries/countries';
 import Products from './features/products/products';
+import Posts from './features/posts/posts';
 
 function App() {
   return (
     <div className="App">
-      <Products></Products>
+      <Posts></Posts>
+      {/* <Products></Products>
      <Countries></Countries>
      <Counter></Counter> 
-     <Todolist></Todolist> 
+     <Todolist></Todolist>  */}
     </div>
   );
 }
