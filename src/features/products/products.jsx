@@ -16,7 +16,7 @@ function Products(){
    }
     
    return  (
-        <div className="border border-warning">
+        <div className="border border-warning p-2">
             <h1>Products</h1>
             <button onClick={()=>{getProducts()}} className="btn  btn-success">load our products</button>&nbsp;
             {isLoading && (<button class="btn btn-primary" disabled>

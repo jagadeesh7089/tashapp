@@ -7,7 +7,7 @@ function Todolist(){
    var {todos}= useSelector(state=>state.todolistReducer)
      var dispatch=useDispatch()
     return (
-        <div className="border border-warning">
+        <div className="border border-warning p-2">
             <h1>Todolist</h1>
             <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}/>&nbsp;
             <button onClick={()=>{dispatch(addtodo(newtodo))}} className="btn btn-success">Add todo</button>

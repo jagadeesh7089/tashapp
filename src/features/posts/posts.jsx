@@ -6,7 +6,7 @@ function Posts(){
 
     
     return (
-        <div className="border border-warning">
+        <div className="border border-warning p-2">
             <h1>Posts</h1>
         
             {isLoading && (<button class="btn btn-primary" disabled>

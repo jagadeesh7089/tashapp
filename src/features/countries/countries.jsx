@@ -14,7 +14,7 @@ function Countries(){
         })
      }
     return (
-        <div className="border border-warning">
+        <div className="border border-warning p-2">
             <h1>countries</h1>
             <button onClick={()=>{getCountries()}} className="btn  btn-success">Load our Countries </button> &nbsp;
             {isLoading && (<button class="btn btn-primary" disabled>
