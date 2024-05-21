@@ -6,10 +6,10 @@ function Counter(){
   var {count}= useSelector(state=>state.counterReducer)
  var dispatch= useDispatch()
   return(
-    <div>
+    <div className="border  border-warning p-2">
         <h1>Counter:{count}</h1>
-        <button onClick={()=>{dispatch(inc())}}>Increment</button>
-        <button onClick={()=>{dispatch(dec())}}>Decrement</button>
+        <button onClick={()=>{dispatch(inc())}} className="btn btn-success" >Increment</button>&nbsp;&nbsp;
+        <button onClick={()=>{dispatch(dec())}} className="btn btn-danger">Decrement</button>
     </div>
   )
 }

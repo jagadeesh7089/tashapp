@@ -10,15 +10,42 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
+import Counter from './features/counter/counter';
+import Todolist from './features/todolist/todolist';
+import Countries from './features/countries/countries';
+import Products from './features/products/products';
+import Posts from './features/posts/posts';
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
-      children:[ {
-        path: "",
-        element:
-      },]
+      children:[
+         {
+        path: "counter",
+        element:<Counter></Counter>
+      },
+         {
+        path: "todolist",
+        element:<Todolist></Todolist>
+      },
+         {
+        path: "counter",
+        element:<Counter></Counter>
+      },
+         {
+        path: "countries",
+        element:<Countries></Countries>
+      },
+         {
+        path: "products",
+        element:<Products></Products>
+      },
+         {
+        path: "posts",
+        element:<Posts></Posts>
+      },
+    ]
     },
   ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

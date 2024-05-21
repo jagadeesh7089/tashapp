@@ -7,10 +7,10 @@ function Todolist(){
    var {todos}= useSelector(state=>state.todolistReducer)
      var dispatch=useDispatch()
     return (
-        <div>
-            <h1>todolist</h1>
-            <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}/>
-            <button onClick={()=>{dispatch(addtodo(newtodo))}}>Add todo</button>
+        <div className="border border-warning">
+            <h1>Todolist</h1>
+            <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}}/>&nbsp;
+            <button onClick={()=>{dispatch(addtodo(newtodo))}} className="btn btn-success">Add todo</button>
             <ul>
                 {
                     todos.map(todo=>{

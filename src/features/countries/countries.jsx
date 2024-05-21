@@ -8,21 +8,22 @@ function Countries(){
    
      function getCountries(){
         Countriesfn().then(res=>{
+            console.log(res.data)
             setIsLoading(false)
             setData(res.data)
         })
      }
     return (
-        <div>
+        <div className="border border-warning">
             <h1>countries</h1>
-            <button onClick={()=>{getCountries()}}>Load our Countries </button>
+            <button onClick={()=>{getCountries()}} className="btn  btn-success">Load our Countries </button> &nbsp;
             {isLoading && (<button class="btn btn-primary" disabled>
   <span class="spinner-grow spinner-grow-sm"></span>
   Loading..
 </button>)}
             <ol>
                 {isLoading===false && (
-                    data.map(country=>{
+                    data?.map(country=>{
                         return <li>{country.name.common}</li>
                     })
                 )}
