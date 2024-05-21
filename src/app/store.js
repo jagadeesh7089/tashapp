@@ -3,7 +3,7 @@ import counterReducer from '../features/counter/counterSlice';
 import todolistReducer from '../features/todolist/todolistslice'
 import {countriesApi} from '../services/countriesapi'
 import { productsApi } from '../services/productsapi';
-import { postsApi } from '../services/postsApi';
+import { postsApi } from '../services/postApi';
 export const store = configureStore({
   reducer: {
     counterReducer,

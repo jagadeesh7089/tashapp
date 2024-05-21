@@ -1,8 +1,10 @@
 import React from "react";
-import { useGetAllpostsQuery } from "../../services/postsApi";
+import { useGetAllpostsQuery } from "../../services/postApi";
 function Posts(){
     var {isLoading,data}=useGetAllpostsQuery()
     console.log(data)
+
+    
     return (
         <div>
             <h1>Posts</h1>
@@ -14,7 +16,7 @@ function Posts(){
 
             <ul>
                 {
-                    !isLoading&&(
+                    !isLoading &&(
                         data?.map(p=>{
                             return <li>{p.title}</li>
                         })
