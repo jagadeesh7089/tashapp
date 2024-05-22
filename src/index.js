@@ -15,6 +15,8 @@ import Todolist from './features/todolist/todolist';
 import Countries from './features/countries/countries';
 import Products from './features/products/products';
 import Posts from './features/posts/posts';
+import Addpost from './features/posts/addpost';
+import Editpost from './features/posts/editpost';
 
   const router = createBrowserRouter([
     {
@@ -44,6 +46,14 @@ import Posts from './features/posts/posts';
          {
         path: "posts",
         element:<Posts></Posts>
+      },
+         {
+        path: "addpost",
+        element:<Addpost></Addpost>
+      },
+         {
+        path: "editpost",
+        element:<Editpost></Editpost>
       },
     ]
     },
