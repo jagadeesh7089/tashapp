@@ -9,9 +9,10 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import Counter from './redux -router/counter';
+
 import Todolist from './redux -router/todolist';
 import Products from './products';
+import Counter from './features/counter/counter';
 
   const router = createBrowserRouter([
     {
