@@ -12,7 +12,8 @@ import {
 
 import Todolist from './redux -router/todolist';
 import Products from './products';
-import Counter from './features/counter/counter';
+import Counter from './redux -router/counter';
+
 
   const router = createBrowserRouter([
     {
