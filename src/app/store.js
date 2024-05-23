@@ -4,6 +4,7 @@ import todolistReducer from '../features/todolist/todolistSlice'
 import {countriesApi} from '../services/countriesapi'
 import { productsApi } from '../services/productsapi';
 import { postsApi } from '../services/postApi';
+import { coursesApi } from '../services/coursesApi';
 export const store = configureStore({
   reducer: {
     counterReducer,
@@ -11,7 +12,8 @@ export const store = configureStore({
     [countriesApi.reducerPath]: countriesApi.reducer,
     [productsApi.reducerPath]:productsApi.reducer,
     [postsApi.reducerPath]:postsApi.reducer,
+    [coursesApi.reducerPath]:coursesApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(countriesApi.middleware,productsApi.middleware,postsApi.middleware),
+    getDefaultMiddleware().concat(countriesApi.middleware,productsApi.middleware,postsApi.middleware,coursesApi.middleware),
 })

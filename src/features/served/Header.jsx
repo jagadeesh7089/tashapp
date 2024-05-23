@@ -29,6 +29,9 @@ import { Link } from "react-router-dom";
         <li class="nav-item">
           <Link class="nav-link" to="addpost">addpost</Link>
         </li>
+        <li class="nav-item">
+          <Link class="nav-link" to="courses">Courses</Link>
+        </li>
       </ul>
     </div>
   </div>
