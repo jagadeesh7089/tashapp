@@ -3,6 +3,8 @@ import { useGetAllcoursesQuery } from "../../services/coursesApi";
 
 function Courses(){
     var {isLoading,data}=useGetAllcoursesQuery()
+    console.log(isLoading)
+    console.log(data)
    
     return (
         <div>
@@ -15,7 +17,7 @@ function Courses(){
         <ol>
             {
                 !isLoading && (data?.map(s=>{
-                    <li>{s.courses}-{s.trainer}</li>
+                  return <li>{s.course} - {s.trainer}-{s.technologies}</li>
                 }))
             }
         </ol>
