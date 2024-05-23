@@ -1,5 +1,4 @@
 import React from "react";
-import { useGetAllCountriesQuery } from "../../services/countriesapi";
 import { useGetAllcoursesQuery } from "../../services/coursesApi";
 
 function Courses(){

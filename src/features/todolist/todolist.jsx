@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addtodo } from "./todolistSlice";
-
-
 function Todolist(){
     var [newtodo,setNewtodo]=useState("")
    var {todos}= useSelector(state=>state.todolistReducer)
