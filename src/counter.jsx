@@ -3,6 +3,7 @@ import { connect } from "react-redux";
  
 
  function Counter(props){
+    console.log("counter::", props)
     
     return(
         <div className="border border-2 border-danger p-2">
