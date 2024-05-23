@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import React, { useEffect } from "react";
-import { useAddPostMutation, useUpdatePostMutation } from "../../services/postApi";
+import { useUpdatePostMutation } from "../../services/postApi";
 import { useLocation, useNavigate } from "react-router-dom";
 function Editpost(){
     var navigate=useNavigate()

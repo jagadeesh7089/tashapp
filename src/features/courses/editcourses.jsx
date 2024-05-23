@@ -3,7 +3,7 @@ import React from "react";
 import { useAddPostMutation, } from "../../services/coursesApi";
 function Editcourses(){
   
-
+var [addCourseFn]=useAddPostMutation()
 var courseform=useFormik({
     initialValues:{
         course:"",
