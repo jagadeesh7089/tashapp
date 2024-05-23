@@ -18,6 +18,7 @@ import Posts from './features/posts/posts';
 import Addpost from './features/posts/addpost';
 import Editpost from './features/posts/editpost';
 import Courses from './features/courses/courses';
+import Addcourses from './features/courses/addcourses';
 
   const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ import Courses from './features/courses/courses';
          {
         path: "courses",
         element:<Courses></Courses>
+      },
+         {
+        path: "addcourse",
+        element:<Addcourses></Addcourses>
       },
     ]
     },

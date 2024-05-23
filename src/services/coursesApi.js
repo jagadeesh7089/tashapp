@@ -6,6 +6,24 @@ export const coursesApi = createApi({
     getAllcourses: builder.query({
       query: () => `/`,
     }),
+    addPost: builder.mutation({
+      query(newpost) {
+        return {
+          url: `/`,
+          method: 'POST',
+          body:newpost
+        }
+      },
+    }),
+    deletePost: builder.mutation({
+      query(postid) {
+        return {
+          url: `/${postid}`,
+          method: 'DELETE',
+          
+        }
+      },
+    }),
   }),
 })
-export const {useGetAllcoursesQuery} = coursesApi
+export const {useGetAllcoursesQuery,useAddPostMutation,useDeletePostMutation,useLazyGetAllcoursesQuery} = coursesApi
