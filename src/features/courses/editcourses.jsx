@@ -1,29 +1,36 @@
 import { useFormik } from "formik";
-import React from "react";
-import { useAddPostMutation, } from "../../services/coursesApi";
+import React, { useEffect } from "react";
+import { useUpdatePostMutation } from "../../services/coursesApi";
+import { useLocation, useNavigate } from "react-router-dom";
 function Editcourses(){
-  
-var [addCourseFn]=useAddPostMutation()
-var courseform=useFormik({
+   var navigate= useNavigate()
+   var {state}=useLocation()
+    useEffect(()=>{
+        editcourseform.setValues(state)
+    },[state])
+  var[updatecourseFn]=useUpdatePostMutation()
+
+var editcourseform=useFormik({
     initialValues:{
         course:"",
         trainer:"",
-        technologies:""
+        technologies:"",
+        id:""
     },
     onSubmit:(values)=>{
-        addCourseFn(values).then(res=>{
-            console.log(res.data)
+        updatecourseFn(values).then(res=>{
+          navigate('/courses')
         })
     }
 })
   return(
     <div>
         <h1>Edit Course</h1>
-        <form onSubmit={courseform.handleSubmit}>
-            <input type="text" placeholder="course" {...courseform.getFieldProps("course")} /><br/><br/>
-            <input type="text" placeholder="trainer" {...courseform.getFieldProps("trainer")}/><br/><br/>
-            <input type="text" placeholder="technologies" {...courseform.getFieldProps("technologies")}/><br/><br/>
-            <button>Add Courses</button>
+        <form onSubmit={editcourseform.handleSubmit}>
+            <input type="text" placeholder="course" {...editcourseform.getFieldProps("course")} /><br/><br/>
+            <input type="text" placeholder="trainer" {...editcourseform.getFieldProps("trainer")}/><br/><br/>
+            <input type="text" placeholder="technologies" {...editcourseform.getFieldProps("technologies")}/><br/><br/>
+            <button> update Courses</button>
         </form>
     </div>
   )

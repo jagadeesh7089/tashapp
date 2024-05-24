@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDeletePostMutation, useGetAllcoursesQuery, useLazyGetAllcoursesQuery } from "../../services/coursesApi";
 import { useNavigate } from "react-router-dom";
 
@@ -17,8 +17,11 @@ function Courses(){
 
     }
     function editcourses(course){
-        navigate('editcourse',{state:course})
+        navigate('/editcourse',{state:course})
     }
+    useEffect(()=>{
+        lazyCourseFn()
+    })
    
     return (
         <div>
