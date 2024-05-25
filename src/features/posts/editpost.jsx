@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 function Editpost(){
     var navigate=useNavigate()
     var {state}=useLocation()
+    console.log(useLocation());
     useEffect(()=>{
         editpostform.setValues(state)
     },[state])
