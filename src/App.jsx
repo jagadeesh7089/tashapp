@@ -19,23 +19,27 @@ function App() {
   return (
     <div>
       <h1>Accordian</h1>
-        <div>
-          {
-            products?.map(prod=>{
-             return <div> <p onClick={()=>{dispatch(prod.id)}} className='m-2 p-3 bg bg-dark text-white'>{prod.title} 
-             <div style={ prod.id===selectedprod?{display:"block"}:{display:"none"}}>
-             <p>Details</p>
-              <img src={prod.image} style={{width:"20%"}}/>
-              </div>
-              </p>
-              </div>
-            })
+       <div >
+        { 
+          products?.map(prod=>{
+            return <div className='m-2 p-3 bg bg-dark text-white' onClick={()=>{dispatch(prod.id)}}>  <div className='d-flex justify-content-between'><p>{prod.title} </p><i class="bi bi-plus-circle"></i> </div>
+            <div style={prod.id===selectedprod?{display:"block"}:{display:"none"}} className='w-25 bg bg-warning shadow-lg'>
+              <h1>Details</h1>
+              <p>{prod.title}</p>
+              <img src={prod.image} className='w-25'/>
+            </div>
+            </div>
             
-          }
+
+          })
+        }
+        </div>  
+            
+          
            
            
           
-        </div>
+  
     </div>
   );
 }
