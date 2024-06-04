@@ -22,7 +22,7 @@ function Todolist(){
             {
             
                 todos.map((s,i)=>{
-                    return <Todo todo={s} deltodo={deletetodo}id={i} ></Todo>
+                    return <Todo todo={s} deltodo={deletetodo} id={i} ></Todo>
                 })
             }
         </div>
