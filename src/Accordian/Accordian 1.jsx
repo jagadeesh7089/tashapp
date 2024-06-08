@@ -1,46 +1,38 @@
 import React, { useState } from "react";
 function Accordian(){
-    var status=false
-    var[selected,setSelected]=useState()
-    function accor(e){
-         e.target.nextElementSibling.style.display="block"
-          
-    }
+ 
+   function click (e){ 
+        if(!e.status){
+          e.status=!e.status
+          console.dir(e)
+        }
+        else{
+          e.status=!e.status
+          console.log(e.status)
+        }
+      }
+     
+    
 
+  
     return (
         <div>
-           <div>
-               <h1 onClick={(e)=>{accor(e)}} state={status} id="d1">A</h1>
-                 <div style={{display:"none"}}>
-                 &nbsp;&nbsp;&nbsp;&nbsp;<span>Apple</span>   
-                    
-                 </div>
-
-           </div>
-           <div>
-               <h1 onClick={(e)=>{accor(e)}} state={status} id="d2">B</h1>
-                 <div style={{display:"none"}}>
-                 &nbsp;&nbsp;&nbsp;&nbsp;<span>Baloon</span>
-                    
-                 </div>
-
-           </div>
-           <div>
-               <h1 onClick={(e)=>{accor(e)}} state={status} id="d3">C</h1>
-                 <div style={{display:"none"}}>
-                 &nbsp;&nbsp;&nbsp;&nbsp;<span>Carrot</span>
-                    
-                 </div>
-
-           </div>
-           <div>
-               <h1 onClick={(e)=>{accor(e)}} state={status} id="d4">D</h1>
-                 <div style={selected==="d4"?{display:"block"}:{display:"none"}}>
-                 &nbsp;&nbsp;&nbsp;&nbsp;<span>Dragon</span>
-                    
-                 </div>
-
-           </div>
+            <div>
+              <h4 onClick={(e)=>{click({ ...e,status:false})}} id="d1" >A</h4>
+               &nbsp; &nbsp;<p style={{display:"none"}} >Apple</p>
+            </div>
+            <div>
+              <h4 onClick={(e)=>{click({...e,status:false})}} id="d2" >B</h4>
+               &nbsp; &nbsp;<p style={{display:"none"}} >Balloon</p>
+            </div>
+            <div>
+              <h4 onClick={(e)=>{click({...e,status:false})}} id="d3" >C</h4>
+               &nbsp; &nbsp;<p style={{display:"none"}} >Carrot</p>
+            </div>
+            <div>
+              <h4 onClick={(e)=>{click({...e,status:false})}} id="d4" >D</h4>
+               &nbsp; &nbsp;<p style={{display:"none"}} >Danger</p>
+            </div>
         </div>
     )
 }
