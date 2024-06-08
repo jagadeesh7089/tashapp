@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 function App(){
+
   var [product,setProduct]=useState([])
   useEffect(()=>{
      axios.get("https://fakestoreapi.com/products").then(res=>{
@@ -34,6 +35,7 @@ function App(){
                 return <div className="bg bg-warning" onClick={()=>{expand(prod.id)}}> <p>{prod.title}</p> 
                 <div style={prod.status?{display:"block"}:{display:"none"}}>
                   <p>Details</p>
+                  <p>{prod.manage}</p>
                 </div>
                 </div>
               })
