@@ -7,6 +7,7 @@ function App(){
   var [product,setProduct]=useState([])
   useEffect(()=>{
      axios.get("https://fakestoreapi.com/products").then(res=>{
+      console.log(res.data)
         var temp=JSON.parse(JSON.stringify(res.data))
           temp.map(s=>{
             return {...s,status:false}
