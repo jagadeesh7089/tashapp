@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Field from './Formik field';
+ 
 
 function App() {
   return (
     <div className="App">
-     <h1>Hii</h1>
+        <Field></Field>
     </div>
   );
 }
