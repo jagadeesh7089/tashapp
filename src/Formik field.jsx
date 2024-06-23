@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
  import * as Yup from 'yup' 
+ import axios from "axios";
 function Field (){
 
       var Formvalidation=useFormik({
@@ -23,8 +24,18 @@ function Field (){
                         return false
                     }
            }),
-           username:Yup.string().test("user validation", "user name is already exits",(un)=>{
-                    
+           username:Yup.string().test("user validation", "user name is already exits",function(un){
+              var {path,createError}=this
+                    var p= new Promise((resolve, reject) => {
+                      axios.get(`https://api.github.com/users/${un}`)
+                      .then((res)=>{
+                        console.log(res)
+                        reject(this.createError({path,message:"chusuko bey"}))
+                      }).catch(err=>{
+                        resolve(true)
+                      })
+                    })
+                    return p
            })
 
         }),
@@ -38,7 +49,10 @@ function Field (){
                <input type="text" {...Formvalidation.getFieldProps("password")}/> <br/><br/>
                <input type="text" {...Formvalidation.getFieldProps("age")}/> <br/><br/>
                <input type="text" {...Formvalidation.getFieldProps("username")}/> <br/><br/>
+               <button>Submit</button>
+                 
                </form>
+
         </div>
     )
  }
