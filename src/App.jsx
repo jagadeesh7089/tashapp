@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { Outlet ,Link} from 'react-router-dom';
+import { Outlet ,Link,  useNavigate} from 'react-router-dom';
 
 
 function App() {
+    //  var navigate= useNavigate()
+    //  navigate("/re")
+  
   return (
     <div className="App">
      <h1>Hii</h1>
+      
      <ul>
       <li>
         <Link to='/kaju'>Kajalbaby</Link>
@@ -17,10 +21,10 @@ function App() {
         
       <li>
         <Link to='/countries'>Countires</Link>
-        </li>
-        
+        </li> 
         
      </ul>
+
      
      <Outlet></Outlet>
     </div>

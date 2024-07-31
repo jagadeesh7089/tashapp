@@ -19,7 +19,7 @@ import { Link, Outlet } from "react-router-dom";
            {
             countries?.map(c=>{
                 return(
-                   <li><Link to={`country/${c.cca3}`}>{c.name.common}</Link></li>
+                   <li><Link to={`countries/${c.cca3}`}>{c.name.common}</Link></li>
                 )
 
             })

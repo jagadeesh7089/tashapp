@@ -16,7 +16,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    children:[ {
+    children:[
+      {
       path: "kaju",
       element: <Kajal></Kajal>
     },
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       element:<Countries></Countries>,
       children:[
         {
-          path: "country/:cname",
+          path: "countries/:cname",
           element:<Country></Country>
         },
       ]
