@@ -5,7 +5,7 @@ import axios from "axios";
 function Country(){
     var [country,setCountry]=React.useState()
    let {cname}= useParams()
-//    console.log(cname);
+  //  console.log(x.cname);
    useEffect(()=>{
      axios.get(`https://restcountries.com/v3.1/alpha/${cname}`).then(res=>{
         console.log(res.data[0]);
