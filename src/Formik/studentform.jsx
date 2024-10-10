@@ -34,7 +34,7 @@ function StudentForm(){
         <div>
               <form onSubmit={studentForm.handleSubmit}>
                 <input  style={studentForm.touched.firstname && studentForm.errors.firstname && {border:"1px solid red"}} type="text" {...studentForm.getFieldProps("firstname")}/>
-                <div style={{color:"red"}}>{ studentForm.touched.firstname && studentForm.errors.firstname}</div> <br/>
+                <div style={{color:"red"}}>{ studentForm.touched.firstname &&  studentForm.errors.firstname}</div> <br/>
 
                 <input  className={studentForm.touched.lastname && studentForm.errors.lastname  && "border border-danger"}type="text" {...studentForm.getFieldProps("lastname")} />
                 <div style={{color:"red"}}> {studentForm.touched.lastname && studentForm.errors.lastname}</div><br/>
