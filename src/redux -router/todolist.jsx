@@ -5,6 +5,7 @@ import Todolistreducer from "./todolist reducer";
 function Todolist(props){
     console.log(props)
     var [newtodo,setNewtodo]=useState("")
+    
     return(
      <div>
         <input type="text" onChange={(e)=>{setNewtodo(e.target.value)}} /> 
