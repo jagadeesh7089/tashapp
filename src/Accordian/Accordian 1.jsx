@@ -5,7 +5,7 @@ var [product,setProduct]=useState([])
 var [pid,setPid]=useState(0)
 
   useEffect(()=>{
-    axios('https://fakestoreapi.com/products').then((res)=>{
+     axios('https://fakestoreapi.com/products').then((res)=>{
       // console.log(res.data)
       var temp=res.data
      temp=temp.map((s=>{
@@ -18,9 +18,14 @@ var [pid,setPid]=useState(0)
   },[])
 
   function abc(pro,i){
-    console.log(pro)
-    pro.status=!pro.status
-    console.log(pro)
+   var temp=product.map((x)=>{
+        if(x.id===pro.id){
+          return {...x,status:!x.status}
+        }
+        return {...x}
+    })
+
+    setProduct([...temp])
     
   
 
