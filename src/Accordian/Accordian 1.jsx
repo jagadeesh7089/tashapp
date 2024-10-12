@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 function Accor(){
 var [product,setProduct]=useState([])
 var [pid,setPid]=useState(0)
+var [temp,setTemp]=useState([])
   useEffect(()=>{
     axios('https://fakestoreapi.com/products').then((res)=>{
       // console.log(res.data)
@@ -18,14 +19,15 @@ var [pid,setPid]=useState(0)
   return (
     <div>
        {
-        product.map((prod,i)=>{
-          return <div>
-            <div onClick={()=>{pcl(prod.id)}}>{prod.title}</div>
-            <div>{prod.id}</div>
-            <div >{prod.price}</div>
-          </div>
+      setTemp=product?.map((prod,i)=>{
+          return
 
         })
+
+       
+       }
+       {
+        console.log(temp)
        }
     </div>
   )
