@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Reducerhook from './reducerHook/reducer';
 
 function App() {
   return (
     <div className="App">
-     <h1>Hii</h1>
+    <Reducerhook></Reducerhook>
     </div>
   );
 }
