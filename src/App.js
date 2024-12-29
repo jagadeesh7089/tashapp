@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import ControlledComponent from './controled';
+import UncontrolledComponent from './uncontroled';
 
 function App() {
   return (
     <div className="App">
-     <h1>Hii</h1>
+     <ControlledComponent></ControlledComponent>
+
+     <UncontrolledComponent></UncontrolledComponent>
     </div>
   );
 }
